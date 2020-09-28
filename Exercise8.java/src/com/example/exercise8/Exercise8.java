@@ -13,8 +13,8 @@ public class Exercise8 {
         System.out.print("Capacity : ");
         Double capacity = scn.nextDouble();
 
-        Integer buses = (int) (((students+teachers)/capacity+0.5));
-        Integer overflow = (int) ((students+teachers)-((buses-1)*capacity));
+        Integer buses = (int) (((students+teachers-1)/capacity+0.5));
+        Integer overflow = (int) (((students+teachers)%capacity));
         System.out.println("Buses required      : " + buses);
         System.out.println("Overflow passengers : " + overflow);
     }
